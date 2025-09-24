@@ -39,7 +39,7 @@ sudo bash ./wazuh-install.sh -i
 # Verify if system is running
 sudo systemctl status wazuh-manager
 
-2️⃣ Wazuh Agent (Ubuntu Client)
+###2️⃣ Wazuh Agent (Ubuntu Client)
 # Download and install agent
 curl -sO https://packages.wazuh.com/4.x/wazuh-install.sh
 sudo bash ./wazuh-install.sh -a
@@ -48,7 +48,7 @@ sudo bash ./wazuh-install.sh -a
 sudo /var/ossec/bin/agent-auth -m <WAZUH_MANAGER_IP>
 sudo systemctl start wazuh-agent
 
-3️⃣ Wazuh Agent (Windows Client)
+###3️⃣ Wazuh Agent (Windows Client)
 
 Download the Wazuh Agent MSI from Wazuh Downloads
 .
@@ -63,12 +63,12 @@ After installation, start the service:
 
 (powershell)net start wazuhsvc
 
-🔍 Validation & Testing
-✅ Agent Connectivity
+##🔍 Validation & Testing
+###✅ Agent Connectivity
 
 Confirm in Wazuh dashboard → Agents → Connected.
 
-✅ Simulated Events
+###✅ Simulated Events
 
 Failed Login (Linux/Windows)
 
@@ -90,7 +90,7 @@ Expected: Process creation alert.
 
 (Add screenshots here)
 
-📸 Screenshots
+##📸 Screenshots
 
 Wazuh Dashboard with agents connected.
 
@@ -110,7 +110,7 @@ Incident simulation and detection.
 
 Documentation and technical writing.
 
-🔗 References
+##🔗 References
 
 Wazuh Official Documentation
 
