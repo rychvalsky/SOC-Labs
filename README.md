@@ -101,8 +101,14 @@ Example alert (failed login).
 
 <img width="1656" height="1048" alt="image" src="https://github.com/user-attachments/assets/ecbf1a6a-e927-46d0-a20e-45712e2d2e56" />
 
+<img width="1656" height="1057" alt="image" src="https://github.com/user-attachments/assets/50fb7ab1-ed3e-4844-aa6e-0f1a67576084" />
 
-File integrity alert.
+
+--
+**File integrity alert. (new file, file updated ,file deleted)**
+
+<img width="1643" height="1042" alt="image" src="https://github.com/user-attachments/assets/20e5d52f-b8f8-4740-880d-5a3b35e1703e" />
+
 
 ---
 
