@@ -1,0 +1,20 @@
+TryHackMe SOC Phishing simulator :
+
+
+
+
+
+
+Time of Activity:
+09/28/2025 15:35:14 (email received)
+List of Related Entities:
+User/Recipient: j.garcia@thetrydaily.thm
+Sender: onboarding@hrconnex.thm
+Suspicious URL: https://hrconnex.thm/onboarding/15400654060/j.garcia
+Subject: Action Required: Finalize Your Onboarding Profile
+Reason for Classifying as False Positive:
+Although the email contained a suspicious external link, firewall/proxy log review in Splunk showed no outbound traffic from the user’s endpoint to the domain hrconnex.thm.
+No evidence of user interaction or attempted connection was found.
+No additional related alerts or indicators were detected.
+
+
