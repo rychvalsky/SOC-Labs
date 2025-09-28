@@ -98,3 +98,83 @@ Suspicious Domain:** amazon.biz
 **Destination IP:** 67.199.248.11
 
 **Subject Line:** Your Amazon Package Couldn’t Be Delivered – Action Required
+
+
+*** TRUE POSITIVE
+
+
+<img width="2163" height="507" alt="image" src="https://github.com/user-attachments/assets/5a595ce1-dd5b-4a5a-a983-b33b98d90122" />
+
+<img width="2422" height="1007" alt="image" src="https://github.com/user-attachments/assets/d71969e3-6659-474c-96fd-d1684f8c9c0a" />
+
+📝 Investigation Report
+
+**Description:**
+This alert was triggered by an inbound phishing email containing a malicious link. Firewall logs confirm that the recipient attempted to access the URL, and the connection was allowed, indicating a higher risk of compromise.
+
+**Time of Activity:**
+
+09/28/2025 15:38:41 → Email delivered to user.
+
+09/28/2025 15:39:50 → Outbound connection to malicious URL allowed by firewall.
+
+**List of Related Entities:**
+
+**Recipient/User:** c.allen@thetrydaily.thm
+
+**Sender:** no-reply@m1crosoftsupport.co
+
+**Suspicious URL:** https://m1crosoftsupport.co/login
+
+**Source IP (user endpoint):** 10.20.2.25
+
+**Destination IP:** 45.148.10.131
+
+**Firewall Rule:** Allow-Internet
+
+**Reason for Classifying as True Positive:**
+
+Email spoofing Microsoft with urgency (“Unusual sign-in activity”).
+
+Contained link to fake login domain m1crosoftsupport.co.
+
+Firewall logs confirm user engagement — outbound HTTPS request was allowed.
+
+High probability of credential phishing attempt.
+
+**Reason for Escalating the Alert:**
+
+User clicked a phishing link and reached the malicious site.
+
+Potential credential compromise if user submitted login information.
+
+Outbound connection was not blocked, meaning the attacker could have received data.
+
+Requires immediate IR team follow-up.
+
+**Recommended Remediation Actions:**
+
+Immediately reset c.allen’s credentials and invalidate sessions.
+
+Search for other inbound emails from m1crosoftsupport.co.
+
+Block domain m1crosoftsupport.co and destination IP 45.148.10.131 at firewall/proxy.
+
+Notify user (c.allen) and conduct phishing awareness follow-up.
+
+Review logs for additional activity from source IP 10.20.2.25 around this time.
+
+Escalate to Incident Response to confirm whether credentials were entered on the site.
+
+**List of Attack Indicators (IOCs):**
+
+**Sender:** no-reply@m1crosoftsupport.co
+
+**Suspicious Domain:** m1crosoftsupport.co
+**
+Phishing URL:** https://m1crosoftsupport.co/login
+
+**Destination IP:** 45.148.10.131
+
+**Subject Line:** Unusual Sign-In Activity on Your Microsoft Account
+
